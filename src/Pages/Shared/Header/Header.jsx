@@ -18,9 +18,9 @@ const Header = () => {
         <Button className="fs-4" variant="danger">
           Latest
         </Button>
-        <Marquee speed={100} className="fw-semibold fs-4">
-          I can be a React component, multiple React components, or just some
-          text.
+        <Marquee speed={80} className="fw-semibold fs-4 text-danger">
+          Maria Hasan Hafsa haria gache. Kao tahar khoj pale Kamrul Hasan
+          Mozumder Kae Janaben...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </Marquee>
       </div>
 
