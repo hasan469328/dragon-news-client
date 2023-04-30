@@ -3,8 +3,9 @@ import Header from "../Pages/Shared/Header/Header";
 import { Col, Container, Row } from "react-bootstrap";
 import LeftNav from "../Pages/LtNav/LeftNav";
 import { Outlet } from "react-router-dom";
-import RightNav from "../RtNav/RightNav";
+
 import Footer from "../Pages/Shared/Footer/Footer";
+import RightNav from "../Pages/RtNav/RightNav";
 
 const NewsDetail = () => {
   return (

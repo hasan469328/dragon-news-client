@@ -1,8 +1,6 @@
-import React from "react";
-import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import logo from "../../../assets/logo.png";
 import moment from "moment";
-import Marquee from "react-fast-marquee";
 
 const Header = () => {
   return (
@@ -14,34 +12,6 @@ const Header = () => {
         </p>
         <p className="fs-3 mt-1">{moment().format("dddd, MMMM D, YYYY")}</p>
       </div>
-      <div className="mb-3 d-flex bg-light p-3">
-        <Button className="fs-4" variant="danger">
-          Latest
-        </Button>
-        <Marquee speed={80} className="fw-semibold fs-4 text-danger">
-          Maria Hasan Hafsa haria gache. Kao tahar khoj pale Kamrul Hasan
-          Mozumder Kae Janaben...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        </Marquee>
-      </div>
-
-      <Navbar collapseOnSelect expand="lg" className="mb-5">
-        <Container>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="mx-auto">
-              <Nav.Link href="#features">Home</Nav.Link>
-              <Nav.Link href="#pricing">About</Nav.Link>
-              <Nav.Link href="#pricing">Career</Nav.Link>
-            </Nav>
-            <Nav className="d-flex align-items-center">
-              <Nav.Link href="#deets">Profile</Nav.Link>
-              <Nav.Link eventKey={2} href="#memes">
-                <Button variant="dark">Login</Button>
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
     </Container>
   );
 };
