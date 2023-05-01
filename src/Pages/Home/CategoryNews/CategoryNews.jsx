@@ -1,3 +1,5 @@
+import { Rating } from "@smastrom/react-rating";
+import '@smastrom/react-rating/style.css'
 import moment from "moment/moment";
 import React from "react";
 import { Card, Image } from "react-bootstrap";
@@ -8,7 +10,7 @@ import {
   FaShareAlt,
   FaStar,
 } from "react-icons/fa";
-import Rating from "react-rating";
+
 import { Link } from "react-router-dom";
 
 const CategoryNews = ({ news }) => {
@@ -33,7 +35,9 @@ const CategoryNews = ({ news }) => {
         ></Image>
         <div className="ps-2 flex-grow-1 mb-0">
           <p className="mb-0">{author?.name}</p>
-          <p className="mb-0">{moment(author?.published_date).format("YYYY-MM-D")}</p>
+          <p className="mb-0">
+            {moment(author?.published_date).format("YYYY-MM-D")}
+          </p>
         </div>
         <div>
           <FaRegBookmark className="pe-2 fs-3"></FaRegBookmark>
@@ -61,20 +65,7 @@ const CategoryNews = ({ news }) => {
       </Card.Body>
       <Card.Footer className="text-muted d-flex align-items-center">
         <div className="flex-grow-1 d-flex align-items-center">
-          <Rating
-          
-            initialRating={rating?.number}
-            readonly
-            emptySymbol={
-              <FaRegStar className="text-warning fs-4"></FaRegStar>
-            }
-            placeholderSymbol={
-              <FaStar ></FaStar>
-            }
-            fullSymbol={
-              <FaStar className="text-warning fs-4"></FaStar>
-            }
-          />
+          <Rating style={{ maxWidth: 180 }} value={Math.round(rating?.number)} readOnly />
           <p className="ps-3 fs-4 align-self-center mb-0">{rating?.number}</p>
         </div>
         <div>
